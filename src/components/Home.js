@@ -22,7 +22,7 @@ export default function Home(props){
           (<p className="mb-4 leading-relaxed">A curious developer, eager to learn <br/> and innovate alongside you on your web journey.</p>)}
           {tr ? 
           (<p className="mb-8"><a className="text-white" href="assets/files/sunay_dogan.pdf" download>Özgeçmişimi buradan indirebilirsiniz.</a></p>) 
-          : (<p className="mb-8">Download my <span><a className="text-white" href="assets/files/sunay_dogan_resume.pdf" download>resume</a></span></p>)}
+          : (<p className="mb-8">Download my <span><a className="text-white" href="assets/files/sunay_dogan.pdf" download>resume</a></span></p>)}
           <div className="flex justify-center">
             <a
               href="#contact"
