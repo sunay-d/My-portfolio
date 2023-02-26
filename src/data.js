@@ -52,6 +52,17 @@
 
 export const projects = [
   {
+    id: "knowosphere",
+    title: "Knowosphere",
+    baslik: "Knowosphere",
+    img: "assets/images/knowosphere.jpg",
+    tech: "React, CSS",
+    live: "https://knowosphere.netlify.app",
+    code: "https://github.com/sunay-d/knowosphere",
+    overview: "",
+    ozet: "",
+  },
+  {
     id: "breakingNews",
     title: "Breaking News",
     baslik: "Haber Sitesi",
@@ -81,17 +92,6 @@ export const projects = [
     tech: "HTML, CSS, JavaScript",
     live: "https://sunay-d.github.io/sudoku/sudoku",
     code: "https://github.com/sunay-d/sunay-d.github.io/tree/main/sudoku",
-    overview: "",
-    ozet: "",
-  },
-  {
-    id: "knowosphere",
-    title: "Knowosphere",
-    baslik: "Knowosphere",
-    img: "assets/images/knowosphere.jpg",
-    tech: "React, CSS",
-    live: "https://knowosphere.netlify.app",
-    code: "https://github.com/sunay-d/knowosphere",
     overview: "",
     ozet: "",
   },
