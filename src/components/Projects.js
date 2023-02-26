@@ -26,7 +26,7 @@ export default function Projects(props) {
         </div>
         <div className="flex flex-wrap -m-4">
           {projects.map((project) => (
-            <div key={project.title} className="w-screen md:w-1/2 xl:1/3 p-4">
+            <div key={project.title} className="w-screen md:w-1/2 xl:w-1/3 p-4">
                 <div className="flex relative" data-project={project.title}>
                   <img
                     alt="gallery"
