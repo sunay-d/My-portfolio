@@ -6,13 +6,15 @@ module.exports = {
 
       ...theme('colors'),
 
-      'primary': '#181818',
+      'primary': '#0f0f0f',
 
       'secondary': '#2b2b2b',
 
       'orange': '#E38407',
 
       'yellow': '#FAD805',
+
+      'green': '#47F224',
 
       "purple": "#6c63ff",
      }),
@@ -30,6 +32,10 @@ module.exports = {
      'yellow': '#FAD805',
 
      'primary': '#181818',
+     
+     "purple": "#6c63ff",
+
+     "black": "#181818"
     })
   },
   plugins: [],

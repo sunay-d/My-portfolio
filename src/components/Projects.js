@@ -1,45 +1,68 @@
 import React from "react";
-import { projects } from "../data";
+import { projects2 } from "../data";
+import '../App.css'
+import '../animate.js'
 
 
 export default function Projects() {
+
+    function openDetails(e) {
+        document.querySelector(`#${e.target.dataset.id}`).style.display = "block"
+    }
+
+    function closeDetails(e) {
+        document.querySelector(`#${e.target.dataset.id}`).style.display = "none"
+    }
+
   return (
-    <section id="projects" className="text-gray-400 bg-primary body-font">
+    <section id="projects" className="reveal revealLeft text-gray-400 bg-primary body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
         <div className="flex flex-col w-full mb-20">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 mx-auto inline-block mb-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-        </svg>
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Websites I've Built
+          <h1 className="splash sm:text-4xl text-3xl font-medium title-font text-white">
+            My Portfolio
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Here is a list of websites that I have built as my personal projects. 
-          </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {projects.map((project) => (
-            <a
-              href={project.link}
-              key={project.image}
-              className="sm:w-1/2 w-100 p-4">
-              <div className="flex relative">
-                <img
-                  alt="gallery"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                  src={project.image}
-                />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 className="tracking-widest text-sm title-font font-medium text-yellow mb-1">
-                    {project.subtitle}
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-white mb-3">
-                    {project.title}
-                  </h1>
-                  <p className="leading-relaxed">{project.description}</p>
+          {projects2.map((project) => (
+            <div key={project.title} className="w-screen md:w-1/3 p-4">
+                <div className="flex relative" data-project={project.title}>
+                  <img
+                    alt="gallery"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    src={project.img}
+                  />
+                  <div className="px-8 py-10 relative z-10 w-full border-4 border-purple bg-primary text-white opacity-0 hover:opacity-100">
+                    <h2 className="tracking-widest text-sm title-font font-medium text-yellow mb-1">
+                      {project.tech}
+                    </h2>
+              <a
+                href="#projects"
+                onClick={openDetails}
+                className="sm:w-1/2 w-100 p-4 w-full">
+                    <h1 className="title-font text-lg font-medium text-white mb-3" data-id={project.id}>
+                      {project.title}
+                    </h1>
+              </a>
+                  </div>
                 </div>
+              <div id={project.id} className="project-details px-8 py-10 relative z-10 w-full h-90 mx-5 border-4 bg-primary text-white opacity-100">
+                  <i data-project={project.id} onClick={closeDetails} class="fa-solid fa-xmark flex flex-row justify-end cursor-pointer text-end text-4xl -mt-2 hover:text-yellow" data-id={project.id}></i>
+                  <h1 className="text-5xl m-0 mb-5">{project.title}</h1>
+                  <div className="flex flex-col md:flex-row justify-center pt-5">
+                    <div className="flex flex-col justfiy-center items-start md:w-1/3">
+                        <img src={project.img} ></img>
+                        <div className="flex flex-row justify-center items-center mt-5">
+                            <a href={project.live} className="inline-flex text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg" target="_blank">See Live</a>
+                            <a href={project.code} className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                    <div className="pt-5 md:p-5 text-left md:w-2/3">
+                        <p>{project.overview}</p>
+                        <p className="mt-5">Technologies used: <span className="text-yellow">{project.tech}</span></p>
+                    </div>
+                    </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
