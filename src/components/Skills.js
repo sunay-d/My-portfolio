@@ -2,13 +2,14 @@ import React from "react";
 import { skills } from "../data";
 import '../animate.js'
 
-export default function Skills(){
+export default function Skills(props){
+  const tr = props.tr
     return (
         <section id="skills" className="reveal bg-primary">
           <div className="container px-5 py-10 mx-auto">
             <div className="text-center mb-20">
               <h1 className="splash sm:text-4xl text-3xl font-medium title-font text-white">
-                Tech Stack
+                {tr ? 'Kullandığım Teknolojiler' : 'Tech Stack'}
               </h1>
             </div>
             <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">

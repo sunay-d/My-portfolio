@@ -2,7 +2,8 @@
 // import { ArrowRightIcon } from "@heroicons/react/solid";
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const {tr, setTR} = props
   return (
     <header className="bg-primary md:sticky top-0 z-10">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -11,23 +12,23 @@ export default function Navbar() {
         </div>
         <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
         <a href="#about" className="mr-3 hover:text-white">
-              About
+              {tr ? 'Hakkımda' : 'About'}
           </a>
           <a href="#projects" className="mr-3 hover:text-white">
-              Portfolio
+              {tr ? 'Portfolyo' : 'Portfolio'}
           </a>
           <a href="#skills" className="mr-3 hover:text-white">
-              Skills
+              {tr ? 'Yetenekler' : 'Skills'}
           </a>
           <a href="#contact" className="mr-3 hover:text-white">
-              Contact
+              {tr ? 'İletişim' : 'Contact'}
           </a>
-          <button className="md:hidden">
-            TR
+          <button onClick={() => setTR(prev => !prev)} className="md:hidden border-l-2 pl-2">
+          {tr ? 'English' : 'Türkçe'}
           </button>
         </nav>
         <div className="px-20 flex items-start hidden md:inline-block">
-          <button className="mr-10">TR</button>
+          <button onClick={() => setTR(prev => !prev)} className="mr-10">{tr ? 'English' : 'Türkçe'}</button>
         </div>
       </div>
     </header>

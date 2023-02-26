@@ -7,14 +7,16 @@ import Skills from "./components/Skills"
 import Contact from "./components/Contact"
 
 function App() {
+  const [tr, setTR] = React.useState(false)
+
   return (
     <main className="text-gray-400 bg-primary body-font">
-      <Navbar/>
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <Navbar tr={tr} setTR={setTR}/>
+      <Home tr={tr} />
+      <About tr={tr} />
+      <Projects tr={tr} />
+      <Skills tr={tr} />
+      <Contact tr={tr} />
     </main>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react"
 import '../animate.js'
 
-export default function Home(){
+export default function Home(props){
+    const tr = props.tr
     return (    
     <section id="home" className="reveal revealLeft active">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
@@ -14,22 +15,24 @@ export default function Home(){
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-end md:text-right mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-purple mt-3">
-            <span className="splash">Hello! I'm Sunay.</span>
+            <span className="splash">{tr ? "Merhaba, ben Sunay." :"Hello! I'm Sunay."}</span>
           </h1>
-          <p className="mb-4 leading-relaxed">
-            A curious developer, eager to learn <br/> and innovate alongside you on your web journey.
-          </p>
-          <p className="mb-8">Download my <span><a className="text-white" href="assets/files/sunay_dogan_resume.pdf" download>resume</a></span></p>
+          {tr ? 
+          (<p className="mb-4 leading-relaxed">Web yolculuğunuzda sizinle birlikte öğrenmeye  <br/>ve yenilikler yaratmaya istekli, meraklı bir web geliştiricisiyim.</p>): 
+          (<p className="mb-4 leading-relaxed">A curious developer, eager to learn <br/> and innovate alongside you on your web journey.</p>)}
+          {tr ? 
+          (<p className="mb-8"><a className="text-white" href="assets/files/sunay_dogan_resume.pdf" download>Özgeçmişimi buradan indirebilirsiniz.</a></p>) 
+          : (<p className="mb-8">Download my <span><a className="text-white" href="assets/files/sunay_dogan_resume.pdf" download>resume</a></span></p>)}
           <div className="flex justify-center">
             <a
               href="#contact"
               className="inline-flex text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg">
-              Work With Me
+              {tr ? 'Benimle çalışmak ister misiniz?' : 'Work With Me'}
             </a>
             <a
               href="#projects"
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-              See My Portfolio
+              {tr ? 'Portfolyoma göz atın.' : 'See My Portfolio'}
             </a>
           </div>
           <div className="social flex flex-wrap gap-5 mt-10 py-0">

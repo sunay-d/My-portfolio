@@ -3,11 +3,12 @@
 import React from "react";
 import '../animate.js'
 
-export default function Contact() {
+export default function Contact(props) {
 
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
+    const tr = props.tr
   
     function encode(data) {
       return Object.keys(data)
@@ -45,16 +46,16 @@ export default function Contact() {
           <div className="bg-secondary relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                ADDRESS
+                {tr ? 'ADRES' : 'ADDRESS'}
               </h2>
               <p className="mt-1">
                 06420 Çankaya / Ankara <br />
-                TURKEY
+                {tr ? 'TÜRKİYE' : 'TURKEY'}
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                EMAIL
+                {tr ? 'E-POSTA' : 'E-MAIL'}
               </h2>
               <a className="text-yellow leading-relaxed">
                 sunay.dogan@pm.me
@@ -75,14 +76,14 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="splash text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
-            Contact Me
+            {tr ? 'İletişim' : 'Contact Me'}
           </h2>
-          <p className="leading-relaxed mb-5">
-          I'm always open to hearing about new opportunities and discussing potential collaborations. Feel free to reach out to me with any inquiries or feedback you may have. 
-          </p>
+            {tr ? 
+            <p className="leading-relaxed mb-5">Yeni fırsatları duymaya ve olası işbirliklerini tartışmaya her zaman açığım. Herhangi bir sorunuz veya geri bildiriminiz için bana ulaşmaktan çekinmeyin.</p>: 
+            <p className="leading-relaxed mb-5">I'm always open to hearing about new opportunities and discussing potential collaborations. Feel free to reach out to me with any inquiries or feedback you may have.</p>}
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-              Name
+              {tr ? 'Ad' : 'Name'}
             </label>
             <input
               type="text"
@@ -94,7 +95,7 @@ export default function Contact() {
           </div>
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-              Email
+              {tr ? 'E-posta' : 'E-mail'}
             </label>
             <input
               type="email"
@@ -108,7 +109,7 @@ export default function Contact() {
             <label
               htmlFor="message"
               className="leading-7 text-sm text-gray-400">
-              Message
+              {tr ? 'Mesaj' : 'Message'}
             </label>
             <textarea
               id="message"
@@ -120,7 +121,7 @@ export default function Contact() {
           <button
             type="submit"
             className="text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg">
-            Submit
+            {tr ? 'Gönder':'Submit'}
           </button>
         </form>
       </div>
