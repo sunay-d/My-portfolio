@@ -69,5 +69,5 @@ export default function Projects(props) {
         </div>
       </div>
     </section>
-  );
+  )
 }

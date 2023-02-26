@@ -26,5 +26,5 @@ export default function Skills(props){
             </div>
           </div>
         </section>
-      );
+      )
 }
