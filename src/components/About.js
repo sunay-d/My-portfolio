@@ -22,7 +22,7 @@ export default function About(props) {
                     <p className="mt-5">Aside from my technical skills, <span className='text-white'>I am also fluent in English and my native language, Turkish</span>, and currently teaching myself French. My diverse background and skills have helped me develop a unique perspective on web development and problem-solving. I'm always eager to take on new challenges and collaborate with others to create innovative solutions.</p>}
                     {tr ? 
                     <p className="mt-5">Benim hakkımda daha fazla şey öğrenmek için zaman ayırdığınız için teşekkür ederim. Sizinle birlikte çalışma fırsatını dört gözle bekliyorum!</p>:
-                    <p >Thank you for taking the time to learn more about me, and I look forward to potentially working with you in the future!</p>}
+                    <p className="mt-5">Thank you for taking the time to learn more about me, and I look forward to potentially working with you in the future!</p>}
                 </article>
                 <div className='ml-5 md:mr-20'>
                     <img className="w-50px shadow max-w-full h-auto align-middle border-none" src="/assets/images/myPhoto.png"/>
