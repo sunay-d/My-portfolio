@@ -49,13 +49,13 @@ export default function Projects(props) {
                 </div>
               <div id={project.id} className="project-details px-8 py-10 relative z-10 w-full h-90 mx-5 border-4 bg-primary text-white opacity-100">
                   <i data-project={project.id} onClick={closeDetails} className="fa-solid fa-xmark flex flex-row justify-end cursor-pointer text-end text-4xl -mt-2 hover:text-yellow" data-id={project.id}></i>
-                  <h1 className="text-5xl m-0 mb-5">{tr ? project.baslik : project.title}</h1>
+                  <h1 className="text-3xl md:text-5xl m-0 mb-5">{tr ? project.baslik : project.title}</h1>
                   <div className="flex flex-col md:flex-row justify-center pt-5">
                     <div className="flex flex-col justfiy-center items-start md:w-1/3">
                         <img src={project.img} ></img>
                         <div className="flex flex-row justify-center items-center mt-5">
-                            <a href={project.live} className="inline-flex text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg" target="_blank">{tr ? 'Canlı' : 'See Live'}</a>
-                            <a href={project.code} className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg" target="_blank">{tr ? 'Kaynak kodu' : 'Source Code'}</a>
+                            <a href={project.live} className="inline-flex text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-base md:text-lg" target="_blank">{tr ? 'Canlı' : 'See Live'}</a>
+                            <a href={project.code} className="ml-1 xl:ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-base md:text-lg" target="_blank">{tr ? 'Kaynak kodu' : 'Source Code'}</a>
                         </div>
                     </div>
                     <div className="pt-5 md:p-5 text-left md:w-2/3">
