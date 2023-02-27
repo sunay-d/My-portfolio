@@ -50,6 +50,8 @@
 
   ]
 
+
+  // laptop mockup from https://www.pngwing.com/tr/free-png-ixujw, licence noncommercial use DMCA 
 export const projects = [
   {
     id: "knowosphere",

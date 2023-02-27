@@ -7,6 +7,7 @@ export default function Home(props){
     <section id="home" className="reveal revealLeft active">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          {/* logo from undraw.co, free licence no attribute needed */}
           <img
             className="object-cover object-center rounded"
             alt="hero"

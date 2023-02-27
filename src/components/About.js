@@ -31,3 +31,5 @@ export default function About(props) {
         </section>
     )
 }
+
+// www.fotor.com for translating photo to artwork. From website: User is responsible for any output Content that User generates using AIGC related service. Currently, Company does not make any copyright claim over the output Content that User generates and does not have the ability to license or release the use of that output Content to User. Please note that this situation may change as the development of copyright laws in various jurisdictions.
