@@ -14,8 +14,8 @@ export default function Skills(props){
             </div>
             <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
               {skills.map((skill) => (
-                <div key={skills.indexOf(skill)} className="p-2 w-1/2 sm:w-1/3 w-full">
-                  <div className="bg-secondary rounded flex p-4 h-full items-center">
+                <div key={skills.indexOf(skill)} className="p-2 w-1/2 sm:w-1/3 lg:w-1/4 w-full">
+                  <div className="bg-secondary rounded-full flex p-4 h-full items-center">
                     <img src={skill.icon} className="w-8 mr-3"/>
                     <span className="title-font font-medium text-white">
                       {skill.name}

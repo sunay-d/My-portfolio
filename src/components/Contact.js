@@ -120,7 +120,7 @@ export default function Contact(props) {
           </div>
           <button
             type="submit"
-            className="text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-lg">
+            className="text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded-full text-lg">
             {tr ? 'Gönder':'Submit'}
           </button>
         </form>
