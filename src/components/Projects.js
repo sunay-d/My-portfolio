@@ -54,8 +54,8 @@ export default function Projects(props) {
                     <div className="flex flex-col justfiy-center items-start md:w-1/3">
                         <img src={project.img} ></img>
                         <div className="flex flex-row justify-center items-center mt-5">
-                            <a href={project.live} className="inline-flex text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded text-base md:text-lg" target="_blank">{tr ? 'Canlı' : 'See Live'}</a>
-                            <a href={project.code} className="ml-1 xl:ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-base md:text-lg" target="_blank">{tr ? 'Kaynak kodu' : 'Source Code'}</a>
+                            <a href={project.live} className="inline-flex text-black bg-yellow border-0 py-2 px-6 focus:outline-none hover:bg-orange rounded-full text-base md:text-lg" target="_blank">{tr ? 'Canlı' : 'See Live'}</a>
+                            <a href={project.code} className="ml-1 xl:ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded-full text-base md:text-lg" target="_blank">{tr ? 'Kaynak kodu' : 'Source Code'}</a>
                         </div>
                     </div>
                     <div className="pt-5 md:p-5 text-left md:w-2/3">
