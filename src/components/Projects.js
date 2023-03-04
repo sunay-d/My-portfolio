@@ -50,7 +50,7 @@ export default function Projects(props) {
               <div id={project.id} className="project-details px-8 py-10 relative z-10 w-full h-90 mx-5 border-4 bg-primary text-white opacity-100">
                   <i data-project={project.id} onClick={closeDetails} className="fa-solid fa-xmark flex flex-row justify-end cursor-pointer text-end text-4xl -mt-2 hover:text-yellow" data-id={project.id}></i>
                   <h1 className="text-3xl md:text-5xl m-0 mb-5">{tr ? project.baslik : project.title}</h1>
-                  <div className="flex flex-col md:flex-row justify-center pt-5">
+                  <div className="info flex flex-col md:flex-row justify-center pt-5">
                     <div className="flex flex-col justfiy-center items-start md:w-1/3">
                         <img src={project.img} ></img>
                         <div className="flex flex-row justify-center items-center mt-5">
