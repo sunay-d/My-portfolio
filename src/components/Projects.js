@@ -24,7 +24,7 @@ export default function Projects(props) {
             {tr ? 'Portfolyom' : 'My Portfolio'}
           </h1>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap -m-4 justify-center">
           {projects.map((project) => (
             <div key={project.title} className="w-screen md:w-1/2 xl:w-1/3 p-4">
                 <div className="flex relative" data-project={project.title}>
@@ -66,6 +66,7 @@ export default function Projects(props) {
               </div>
             </div>
           ))}
+          {tr ? <p className="text-center">Diğer projelerimi görmek için lütfen <a className="text-white" target="_blank" href="https://www.github.com/sunay-d">Github sayfamı</a> ziyaret edin.</p> : <p className="text-center">Please visit my <a  className="text-white" target="_blank" href="https://www.github.com/sunay-d">Github page </a>to see other projects.</p> }
         </div>
       </div>
     </section>
