@@ -19,7 +19,7 @@ export default function Navbar(props) {
           <a href="#skills" className="mr-3 hover:text-white">
               {tr ? 'Yetenekler' : 'Skills'}
           </a>
-          <a href="https://codewhiletrue.com" target="_blank" className="mr-3 hover:text-white">
+          <a href="https://www.codewhiletrue.com" target="_blank" className="mr-3 hover:text-white">
               {tr ? 'Blog' : 'Blog'}
           </a>
           <a href="#contact" className="mr-3 hover:text-white">
