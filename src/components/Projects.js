@@ -27,7 +27,7 @@ export default function Projects(props) {
         <div className="flex flex-wrap -m-4 justify-center">
           {projects.map((project) => (
             <div key={project.title} className="w-screen md:w-1/2 xl:w-1/3 p-4">
-                <div className="flex relative" data-project={project.title}>
+                <div className="flex relative basis-auto" data-project={project.title}>
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"

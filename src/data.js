@@ -77,7 +77,7 @@ export const projects = [
     title: "Breaking News",
     baslik: "Haber Sitesi",
     img: "assets/images/news.png",
-    tech: "React, Bootstrap, RESTful API",
+    tech: "React, Bootstrap, API",
     live: "https://breakingnow.netlify.app",
     code: "https://github.com/sunay-d/Breaking-News",
     overview: "Breaking News App presents users with the most recent news from around the world. The app offers users the ability to choose from different topics to be shown or search for specific keywords. The purpose of this app is to provide users with up-to-the-minute news and a customizable experience for staying informed on the latest events.",
