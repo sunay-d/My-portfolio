@@ -4,7 +4,7 @@ import '../animate.js'
 export default function Home(props){
     const tr = props.tr
     return (    
-    <section id="home" className="reveal revealLeft active">
+    <section id="home" className="active">
       <div className="container mx-auto flex px-10 py-20 lg:flex-row flex-col items-center">
         <div className="xl:max-w-xl xl:w-full lg:w-1/2 w-5/6">
           {/* logo from undraw.co, free licence no attribute needed */}
