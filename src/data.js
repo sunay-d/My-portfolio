@@ -1,11 +1,19 @@
    export const skills = [
     {
-      name: "JavaScript",
-      icon: '/tech-logos/javascript.png'
+       name: "JavaScript",
+       icon: '/tech-logos/javascript.png'
+    },
+    {
+      name: "TypeScript",
+      icon: "/tech-logos/typescript.png"
     },
     {
       name: "Python",
       icon: '/tech-logos/python.png'
+    },
+    {
+      name: "Firebase",
+      icon: '/tech-logos/firebase.png'
     },
     {
       name: "HTML5",
@@ -48,7 +56,7 @@
       icon: '/tech-logos/figma.png'
     },
 
-  ]
+   ]
 
 
   // laptop mockup from https://www.pngwing.com/tr/free-png-ixujw, licence noncommercial use DMCA 
